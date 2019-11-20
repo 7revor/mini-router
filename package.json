@@ -1,6 +1,6 @@
 {
   "name": "py-mini-router",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "商家应用pc端路由组件",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,10 @@
     "mini-app",
     "javascript"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/7revor/mini-router"
+  },
   "author": "7revor",
   "license": "ISC",
   "devDependencies": {
