@@ -143,4 +143,5 @@ Temporary Items
 .apdisk
 
 yarn.lock
-.idea
+.idea/**
+index.js
