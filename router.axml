@@ -1,0 +1,3 @@
+<block key="{{name}}">
+  <slot  name="{{name}}" />
+</block>

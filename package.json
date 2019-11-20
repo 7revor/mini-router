@@ -1,0 +1,23 @@
+{
+  "name": "py-mini-router",
+  "version": "1.0.7",
+  "description": "商家应用pc端路由组件",
+  "main": "index.js",
+  "scripts": {
+    "build": "node run.js"
+  },
+  "keywords": [
+    "router",
+    "mini-app",
+    "javascript"
+  ],
+  "author": "7revor",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "uglify-js": "^3.6.9"
+  }
+}
