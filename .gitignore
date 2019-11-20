@@ -145,3 +145,4 @@ Temporary Items
 yarn.lock
 .idea/**
 index.js
+.npmignore
