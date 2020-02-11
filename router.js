@@ -2,13 +2,14 @@ Component({
   data: {
     name: ''
   },
-  didMount: function() {
-    if (!this.$page._router) {
-      throw new Error('routerInstance not found');
+  didMount: function () {
+    this.$router = this.$page._router || this.$page.$router
+    if (!this.$router) {
+      throw new Error('当前页面未绑定router实例，请将$router或_router实例绑定至当前页面');
     }
-    this.$page._router.registerComponent(this);
+    this.$router.registerComponent(this);
   },
-  didUnmount: function() {
-    this.$page._router.removeComponent(this);
+  didUnmount: function () {
+    this.$router.removeComponent(this);
   },
 });
