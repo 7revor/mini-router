@@ -11,16 +11,21 @@ npm i py-mini-router -S
 ```
 
 # 使用
-```
+```js
 import routerConfig from './router';   //路由定义
 import Router from 'py-mini-router';  //引入初始化方法
 Page({
  
   onLoad() {
-    this._router = new Router(routerConfig)
+    this.$router = new Router(routerConfig)
   },
   onItemClick(event) {
-    this._router.push({path:'xxx',name:7revor});
+    this.$router.push({
+        path:'xxx',
+        param:{
+          name:7revor
+        }
+     });
   },
 });
 ```
@@ -78,26 +83,30 @@ export default {
 # API
 ## push & replace
 ```
-this._router.push({
+this.$router.push({
   path:'/pages/home',
-  id:123,
-  name:'7revor'
+  param:{
+    id:123,
+    name:'7revor'
+  }
 })
-this._router.push('/pages/home')
+this.$router.push('/pages/home')
 
-this._router.replace('/pages/home') // replace会替换当前路由栈（暂不支持后退功能）
+this.$router.replace('/pages/home') // replace会替换当前路由栈（暂不支持后退功能）
 ```
 ### 参数获取
 ```
-const {currentRoute} = this._router;
+const {currentRoute} = this.$router;
 ```
 ### currentRoute
 合并跳转时传入的参数以及路由定义的参数
 ```
 {
   path:'/pages/home',
-  id:123,
-  name:'7revor',
+  param:{
+    id:123,
+    name:'7revor'
+  },
   customOption:'xxx' // 任何自定义配置（在routeConfig中定义）
 }
 ```
@@ -106,8 +115,8 @@ const {currentRoute} = this._router;
 ```
 Page({
   onLoad() {   
-    this._router = new Router(routerConfig);
-    this._router.setBeforeChange(this, 'onBeforeChange');
+    this.$router = new Router(routerConfig);
+    this.$router.setBeforeChange(this, 'onBeforeChange');
 	},
   onBeforeChange(from, to){//钩子函数可以获取两个参数，from为当前路由，to为即将要跳转的路由
     console.log(from, to)
@@ -121,7 +130,7 @@ Page({
 ```
 Page({
   onLoad() {   
-		 this._router = new Router(routerConfig);
+		 this.$router = new Router(routerConfig);
     this.$router.setAfterChange(this, 'onAfterChange');
 	},
   onAfterChange(){
