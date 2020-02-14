@@ -130,11 +130,11 @@ Page({
 ```
 Page({
   onLoad() {   
-		 this.$router = new Router(routerConfig);
+    this.$router = new Router(routerConfig);
     this.$router.setAfterChange(this, 'onAfterChange');
-	},
+  },
   onAfterChange(){
-		//逻辑
+    // 逻辑
   }
 });
 ```
