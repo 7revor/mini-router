@@ -13,4 +13,5 @@ fs.readFile('./lib/index.js', function(err, data) {
   var result = babel.transform(src, transOpts);
   var uglifyCode = UglifyJS.minify(result.code);
   fs.writeFileSync('index.js', uglifyCode.code);
+  console.log('build success')
 })
