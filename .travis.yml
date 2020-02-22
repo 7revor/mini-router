@@ -1,13 +1,12 @@
 language: node_js
 node_js:
-  - "12.13"
-  -
-before_deploy: npm build
-
+- '12.13'
+before_deploy: "node run.js"
 deploy:
   provider: npm
   email: 7071242@qq.com
-  api_key: "$NPM_TOKEN"
+  api_key:
+    secure: ad0B1Bk3p8jeK+M251j9wkE/8P79ch2ie4AJNTmYi+ESCy6bHJA8f98bdy5qNTyDopFbpp/xClTAF+F2Omg1nL/7wTJ8vLaWwd2wvHnB0hZ7iZhaOELcZrzEmkTeCHD/IXzmWIL6jyb44pMB8NcrWrn+7IutSAGqTIdN0tHNzuHkkxnOd4yoGOoC/GgWQfAi68kee8jtdeFN26jDIzGXLgAXtPhnpRX1KYi8Y7P0T+D9lZaOdvttYbHQ69xPKHuKIOt852qgisWqo5PQcmLKzCMqFIHkHaEKvbU3o0/IDt48d/HRJTyQALKJDSL7nQg8JnGL8TPu26UlZgYG2lCgmXTy2Xd/NDtAKwwbK8BeZFwpFuOyqxT1N9thNlzugg64ttuLH6itMCaINOYPXxwgAULVfN9u2Pnk7xR6OwObNb1zNYIJLsujzGtjCvGMFE0cj4RiowU3blooh3KWtswl0BunosXOyRtzyaue+bB9k3p7uwVQzJxHstVtpLIdA3RIAQV9f2A5GlltY/bxF9YV2rz6Ru8s5RWwvez113uNP0RMtRa1GAnFI1NIRW1s9449ExjErIDahVCmWBIqfO8SGxvXgd5XP6s0DpHKC5vl4cE50XmmzhTiWdNC6VnqlwihWPVcndX19HWuq/UxnFHGX+pdp4ZMhYN7ccG0ItP+Jvo=
   skip_cleanup: true
   on:
     all_branches: true
