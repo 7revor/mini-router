@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - lts/*
+cache:
+  directories:
+    - node_modules
+deploy:
+  provider: npm
+  email: $EMAIL
+  api_key: $TOKEN
+  skip_cleanup: true
+  on:
+    tags: true
+    branch: master
