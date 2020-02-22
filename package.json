@@ -1,6 +1,6 @@
 {
   "name": "py-mini-router",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "商家应用pc端路由组件",
   "main": "index.js",
   "scripts": {
