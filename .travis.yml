@@ -1,13 +1,11 @@
 language: node_js
 node_js:
 - lts/*
-cache:
-  directories:
-  - node_modules
 before_deploy: npm build
 deploy:
   provider: npm
   email: 7071242@qq.com
-  api_key: $NPM_TOKEN
+  api_key:
+    secure: O0oNPJpZSwDIsFbyx+TImy00hEAogdSlAEIsVsoJwal65iuy6lWE8Wrxme/EsN26hbAtMWdB55xM4srj6eUDlwFl57icfjjRW8ChmOXQThr85vDBBH10Fgn6qxZnh82jfX6gc4HiRv5xKX6tAQtWM/cqApM/x9s5f80e9ScveSAtSY8+xJBS9ETuBvihFVKZH/yhebxRelKg9Wf92MLF5KQZDv6V2R9edCchHHgNrNj9cwP6mcqQnJQBXzdfXaVxbuObFiGjHp0sFo9IEU24u7IJcgQ2NJ0WGpNpEe2XNragijxx9W9nxIDTgAdRgK+epqr1t4R4XNlrhqbNK1qLVTTTVP735Y75uBVHwVGnpMkOByeXWnHtFJtyuQcG7/RVC+YOJV93ogX6Hy1GrTGaB+Yjkf81sZ0Oq4R6LxL1DPAerg3ExkY6g6/IiH4kxy426eJXhzbOEVt8pOBPwULV74rr7IyYxLBLNtga+k5SLKBPBgVWOmgYQyrt2x8AdAkGsR4ktr+QE4NPOKc8VKA0uc7QnWkg38qOd4j0Bqx/pux17lEwOQ/oB5iyU1IgPPr29fYR9e7DJmoFZbR0cG4OcD9HT4PcboL61at9n+WtghqWUxTOxkJUqT7fG+M3isjwzfa4pJbjp7uMuavCJs2Z+POYgKn38s4wGdKF9o0R8Ks=
   on:
-    branch: master
+    repo: 7revor/mini-router
