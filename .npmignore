@@ -147,3 +147,4 @@ lib
 .gitignore
 .npmignore
 .idea
+.travis.yml
