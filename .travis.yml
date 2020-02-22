@@ -1,3 +1,7 @@
+language: node_js
+sudo: required
+node_js:
+  - lts/*
 deploy:
   provider: npm
   email: 7071242@qq.com
