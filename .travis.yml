@@ -6,7 +6,7 @@ before_deploy: "node run.js"
 deploy:
   edge: true
   provider: npm
-  email: 7071242@qq.com
+  email: "$NPM_EMAIL"
   api_key: "$NPM_TOKEN"
   on:
     repo: 7revor/mini-router
