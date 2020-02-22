@@ -4,11 +4,12 @@ node_js:
 cache:
   directories:
     - node_modules
+script:
+  - "npm build"
 deploy:
   provider: npm
   email: $EMAIL
   api_key: $TOKEN
   skip_cleanup: true
   on:
-    tags: true
     branch: master
