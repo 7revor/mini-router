@@ -1,11 +1,10 @@
 language: node_js
 node_js:
-  - lts/*
+- lts/*
 cache:
   directories:
-    - node_modules
-script:
-  - "npm build"
+  - node_modules
+before_deploy: npm build
 deploy:
   provider: npm
   email: $EMAIL
@@ -13,3 +12,5 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+dd:
+  secure: JtX3uDSmokCl9URaaCLYXbzcJKvnGuzDeuWoMixqQitaQlQUVF2M6rCR5ciNY2OQWFFM0mTrWKNlRm3476DhiQYDT1dYBQglWtQMSig74gMjOfrcnx3eu9uuCBtBA3ojxImTbR1qfj4eYYZOwHDllsESqhNZJf5omyX/+RzGjkc44qstzIsTMRTbWzAze3G9BLPBmiWJDex6R8U91BORmfPgpxj2Uzch68ppQaAU7vWe0Qmu3NqpNa5B1CeWXE+a/TB28AP30YQYX/JMc70u8zn7r0TD8AXsHY+WENV3XYiHOVmDISiA1a15DhNgyIowy1wnoKHSIjq5ReH6NemOszca5LJg3fLjUpYrOlJX8yjqba6WEAX123sJa7lJUwUq56BJZ17C7trjKWWi3NHP/5nQp1+Meo+QxnLeFv00CkThkmDE3Fxf9ztaq4TQIq9s4GBugrYvMk+VUde5ugIOOdFsJxjjfZWC/+RVJ+WW0cugUzg7QQ+NnnD8W0CVIBGfCvjyUn0u4Q2B7a8i3e/axO6FwMZU7xBFFBKNS7qzoZvctPmXPcJq2rxKlpxVnvufKqY4KHf4kIoCKdDNYwhkMwcSXty80JXYbNsZaZxRB7g1iVuKFpmOjFECroX8CcBjRV2r6OmkBZaylV/itnkk9eUbsIorSVi58yk4U54K8xQ=
