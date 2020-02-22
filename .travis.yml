@@ -8,6 +8,6 @@ before_deploy: npm build
 deploy:
   provider: npm
   email: 7071242@qq.com
-  api_key: "$NPM_TOKEN"
+  api_key: ${NPM_TOKEN}
   on:
-    repo: 7revor/mini-router
+    branch: master
