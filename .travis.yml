@@ -7,7 +7,6 @@ deploy:
   edge: true
   provider: npm
   email: 7071242@qq.com
-  api_key:
-    secure: gwRLGE5VGEkHvQmicUM6r4tPLo+46NyUckkUSks5d+kWfDQOrFjkRW4nbuOX8IQbeLqmpRI1BYpWMoD1qvpTVcUg10hjkvxy7wTqlG33DQZ6AUSawmgp5j0drF+qvSd1uv3Pl4ROPneXiW2goKe5PfNgn/+fmcwqpE8YvW2q9Xkne01Cc9hqgTwENponyCQzE7UN5vD8sXPfi290uOC6xdrwWTEPQHBoJdmkj6No35T/kmqe+qUMdMlG0fAOzw3zqNR8N61JCni39QymgI8h13a/lkZfNLfQa/SkjRqsDO3H2kCBdf5YN9pHw2y4SXtwoG6QU6CcLLGfRUCiIBwCXwtQgjIm2J+zepDclWeUyVHPkEJM6w+xVnbrfWHJWrshNHa+VYApPM1mJPEnv1MuxUmOFAWnAeXXgj1JmIgT+o9JwK/D7sGg48+i4z9Um9W+6R/SePs4d4L4UW9AACcIEurYIJ5uw5q5Bc+9nbSrM9ipZdeAJACJ7ZFUIsyx00FgnV2bE05z3E25dHAMaT4Xn3mdIG/2LsVVoC0NXy9aoj9YBIMRxAYR8oF/hedx/3R4qtay53CjZZRL/JGmRK9GpH4JBD7y0FHLcausm0s2Jhgd1zgkE5d7Tb+i0sIsOHw0EEDVvSgS830c8NJynvBfTqpf0ieQysqDmg29D+h2PNw=
+  api_key: "$NPM_TOKEN"
   on:
     repo: 7revor/mini-router
