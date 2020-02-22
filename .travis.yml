@@ -1,8 +1,10 @@
 language: node_js
+version: 1.0
 node_js:
 - '12.13'
 before_deploy: "node run.js"
 deploy:
+  edge: true
   provider: npm
   email: 7071242@qq.com
   api_key:
