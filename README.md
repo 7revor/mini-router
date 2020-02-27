@@ -125,7 +125,20 @@ Page({
 });
 
 ```
-## setAfterChange
+## removeBeforeChange 删除路由守卫
+删除路由守卫，用法和setBeforeChange相同，会删除同一组件（页面）实例上同名的守卫函数
+```
+Page({
+  onLoad() {   
+    this.$router = new Router(routerConfig);
+    this.$router.setBeforeChange(this, 'onBeforeChange');
+	},
+  didUnmount(){
+    this.$router.removeBeforeChange(this, 'onBeforeChange');
+  },
+});
+```
+## setAfterChange 
 设置钩子函数，此函数会在导航变更后调用。（可设置多个，按顺序依次执行）
 ```
 Page({
@@ -138,3 +151,5 @@ Page({
   }
 });
 ```
+## removeAfterChange 删除路由监听
+删除路由守卫，用法和setAfterChange相同，会删除同一组件（页面）实例上同名的监听函数
